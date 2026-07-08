@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Request - Olirum Scientific</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Table Styles for the Quote Cart */
+        .quote-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .quote-table th, .quote-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .quote-table th {
+            background-color: #f8f9fa;
+            color: #1a365d;
+            font-weight: bold;
+        }
+        .quote-table td {
+            color: #4a5568;
+        }
+        .remove-btn {
+            color: #e53e3e;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1rem;
+        }
+        .empty-cart-msg {
+            text-align: center;
+            padding: 40px;
+            background: #fff;
+            color: #718096;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+    <!-- Navigation Bar -->
+    <header style="margin-top: 0 !important; top: 0; width: 100%;">
+        <div class="logo-container">
+            <img src="Assets/Logo.png" alt="Olirum Scientific Logo" style="height: 40px; width: auto;">
+            Olirum Scientific
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li>
+                    <a href="category.html?cat=mycoplasma" id="nav-mycoplasma">MYCOPLASMA <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html?id=mark">MaRK</a></li>
+                        <li><a href="product.html?id=mad">MaD</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="category.html?cat=cellular-assays" id="nav-cellular-assays">Cellular Assays <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html?id=calcein">Calcein AM</a></li>
+                        <li><a href="product.html?id=dcfda">DCFDA bases ROS Detection Kit</a></li>
+                        <li><a href="product.html?id=fava">FAVA-Fluoroscence</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="category.html?cat=microscopy" id="nav-microscopy">Microscopy <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html?id=mounting">Mounting Media</a></li>
+                        <li><a href="product.html?id=supernova">Supernova</a></li>
+                    </ul>
+                </li>
+                <li><a href="quote.html" class="active">QUOTE PAGE</a></li>
+                <li><a href="all-products.html">ALL PRODUCTS</a></li>
+                <li class="search-box" style="display: flex; align-items: center; background: #222; border-radius: 4px; padding: 2px 10px;">
+                    <input type="text" id="global-search-input" placeholder="Search products..." style="border: none; background: transparent; color: #fff; outline: none; width: 150px; font-family: inherit; font-size: 0.8rem;">
+                    <i class="fas fa-search search-icon" id="global-search-btn" style="cursor: pointer; color: #aaa;"></i>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Side-by-Side Flexbox Container -->
+    <main id="quote-container" style="flex: 1; display: flex; flex-wrap: wrap; gap: 40px; padding: 40px 20px; max-width: 1200px; margin: 0 auto; width: 100%; box-sizing: border-box;">
+        
+        <!-- Left Side: Cart -->
+        <div style="flex: 2; min-width: 300px;">
+            <h1 class="category-title" style="margin-top: 0; text-align: left; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0;">Your Quote Request</h1>
+            <div id="quote-cart-container">
+                <!-- Table will be generated here by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Right Side: Checkout Form -->
+        <div style="flex: 1; min-width: 300px;">
+            <div id="checkout-form-container" style="display: none; background: #f4f6f9; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+                <h3 style="margin-top: 0; margin-bottom: 20px; font-size: 1.5rem; color: #1a365d;">Request Official Quote</h3>
+                <form id="quote-form" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div>
+                        <label for="user_name" style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 0.9rem; color: #333;">Full Name</label>
+                        <input type="text" id="user_name" placeholder="e.g., Jane Doe" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; box-sizing: border-box;">
+                    </div>
+                    <div>
+                        <label for="user_email" style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 0.9rem; color: #333;">Email Address</label>
+                        <input type="email" id="user_email" placeholder="name@company.com" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; box-sizing: border-box;">
+                    </div>
+                    <button type="submit" id="submit-quote-btn" class="btn-quote" style="width: 100%; padding: 15px; font-size: 1.1rem; margin-top: 10px; cursor: pointer;">
+                        Send Request
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: #1a1a1a; color: #fff; text-align: center; padding: 30px 20px;">
+        <p style="margin: 5px 0; font-size: 1rem;">Olirum Scientific Products and Services</p>
+        <p style="margin: 5px 0; font-size: 0.8rem; color: #aaa;">AIC SEED, IISER Pune, Dr. Homi Bhabha Road, Pashan, Pune.</p>
+        <p style="margin: 15px 0 0 0; font-size: 0.8rem; color: #666;">&copy; 2026 Olirum Scientific. All rights reserved.</p>
+    </footer>
+
+    <script src="quote.js"></script>
+</body>
+</html>

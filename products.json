@@ -1,0 +1,58 @@
+{
+  "mark": {
+    "name": "MaRK",
+    "price": 1000.00,
+    "category": "MYCOPLASMA",
+    "image": "mark1.jpg",
+    "description": "Enter the detailed description of the product here. It is excellent for cell culture protocols."
+  
+  },
+  "mad": {
+    "name": "MaD",
+    "price": 1250.50,
+    "category": "mycoplasma",
+    "image": "mad1.jpg",
+    "description": "This is the detailed description for Product 12."
+    
+  },
+  "mounting": {
+    "name": "Mounting Media",
+    "price": 1250.50,
+    "category": "Microscopy",
+    "image": "mm1.jpg",
+    "description": "This is the detailed description for Product 12."
+    
+  },
+  "supernova": {
+    "name": "Supernova",
+    "price": 1250.50,
+    "category": "Microscopy",
+    "image": "supernova1.jpg",
+    "description": "This is the detailed description for Product 12."
+    
+  },
+  "fava": {
+    "name": "FAVA",
+    "price": 1250.50,
+    "category": "Cellular-assays",
+    "image":"fava1.jpg",
+    "description": "This is the detailed description for Product 12."
+    
+  },
+  "dcfda": {
+    "name": "DCFDA based ROS Detection Kit",
+    "price": 1250.50,
+    "category": "Cellular-assays",
+    "image": "dcfda1.jpg",
+    "description": "This is the detailed description for Product 12."
+    
+  },
+  "calcein": {
+    "name": "Calcein AM",
+    "price": 1250.50,
+    "category": "Cellular-assays",
+    "image": "calcein1.jpg",
+    "description": "This is the detailed description for Product 12."
+    
+  }
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Olirum Scientific</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Shared Navigation Bar -->
+    <header>
+        <div class="logo-container">
+    <img src="Assets/Logo.png" alt="Olirum Scientific Logo" style="height: 40px; width: auto;">
+    Olirum Scientific
+</div>
+        <nav>
+    <ul id="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        
+        <!-- Category 1: Mycoplasma -->
+        <li>
+            <!-- Note the '?cat=' parameter for the category page -->
+            <a href="category.html?cat=mycoplasma" id="nav-mycoplasma">MYCOPLASMA <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+            <ul class="dropdown-menu">
+                <!-- Note the '?id=' parameter for the individual products -->
+                <li><a href="product.html?id=mark">MaRK</a></li>
+                <li><a href="product.html?id=mad">MaD</a></li>
+            </ul>
+        </li>
+        
+        <!-- Category 2: Cellular Assays -->
+        <li>
+            <a href="category.html?cat=cellular-assays" id="nav-cellular-assays">Cellular Assays <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="product.html?id=calcein">Calcein AM</a></li>
+                <li><a href="product.html?id=dcfda">DCFDA bases ROS Detection Kit</a></li>
+                <li><a href="product.html?id=fava">FAVA-Fluoroscence</a></li>
+            </ul>
+        </li>
+        
+        <!-- Category 3: Microscopy -->
+        <li>
+            <a href="category.html?cat=microscopy" id="nav-microscopy">Microscopy <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="product.html?id=mounting">Mounting Media</a></li>
+                <li><a href="product.html?id=supernova">Supernova</a></li>
+            </ul>
+        </li>
+        
+        <li><a href="quote.html">QUOTE PAGE</a></li>
+        <li><a href="all-products.html">ALL PRODUCTS</a></li>
+        <<li class="search-box" style="display: flex; align-items: center; background: #222; border-radius: 4px; padding: 2px 10px;">
+    <input type="text" id="global-search-input" placeholder="Search products..." style="border: none; background: transparent; color: #fff; outline: none; width: 150px; font-family: inherit; font-size: 0.8rem;">
+    <i class="fas fa-search search-icon" id="global-search-btn" style="cursor: pointer; color: #aaa;"></i>
+</li>
+    </ul>
+</nav>
+    </header>
+
+    <!-- All Products Content -->
+    <main class="category-container">
+        <h1 class="category-title">All Products</h1>
+        
+        <div class="toolbar">
+            <span>SHOWING ALL 7 RESULTS</span>
+            <select>
+                <option>Default sorting</option>
+                <option>Sort by price</option>
+            </select>
+        </div>
+
+        <div class="product-grid">
+            
+            <!-- Product 1: Mark-full name -->
+            <div class="product-card" style="cursor: pointer; position: relative;">
+                <a href="mark.html" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder1.jpg" alt="Mark-full name">
+                    <h3>MaRK</h3>
+                    <p class="product-price">₹1,000.00</p>
+                    <p class="product-category">MYCOPLASMA</p>
+                </a>
+                
+                <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
+                    <!-- Unique ID for this specific quantity input -->
+                    <input type="number" id="qty-mark-all" value="1" min="1" style="width: 50px; padding: 8px;">
+                    
+                    <button class="btn-quote" 
+                            data-name="MaRK" 
+                            data-price="1000.00" 
+                            data-category="MYCOPLASMA"
+                            data-qty-id="qty-mark">
+                        Add to Quote
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2: Product 12 -->
+            <div class="product-card" style="cursor: pointer; position: relative;">
+                <a href="mad.html" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder2.jpg" alt="Product 12">
+                    <h3>Product 12</h3>
+                    <p class="product-price">₹1,250.50</p>
+                    <p class="product-category">MYCOPLASMA</p>
+                </a>
+                
+                <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
+                    <!-- Unique ID for this specific quantity input -->
+                    <input type="number" id="qty-prod12-all" value="1" min="1" style="width: 50px; padding: 8px;">
+                    
+                    <button class="btn-quote" 
+                            data-name="" 
+                            data-price="1250.50" 
+                            data-category="MYCOPLASMA"
+                            data-qty-id="qty-prod12-all">
+                        Add to Quote
+                    </button>
+                </div>
+            </div>
+            <div class="product-card" style="cursor: pointer; position: relative;">
+                <a href="Calcein.html" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder1.jpg" alt="Mark-full name">
+                    <h3>Calcein AM</h3>
+                    <p class="product-price">₹1,000.00</p>
+                    <p class="product-category">Cellular Assays</p>
+                </a>
+                
+                <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
+                    <!-- Unique ID for this specific quantity input -->
+                    <input type="number" id="qty-mark-all" value="1" min="1" style="width: 50px; padding: 8px;">
+                    
+                    <button class="btn-quote" 
+                            data-name="Calcein AM" 
+                            data-price="1000.00" 
+                            data-category="Cellular Assays"
+                            data-qty-id="qty-calcein">
+                        Add to Quote
+                    </button>
+                </div>
+            </div>
+            <div class="product-card" style="cursor: pointer; position: relative;">
+                <a href="dcfda.html" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder1.jpg" alt="Mark-full name">
+                    <h3>DCFDA based ROS Detection Kit</h3>
+                    <p class="product-price">₹1,000.00</p>
+                    <p class="product-category">Cellular Assays</p>
+                </a>
+                
+                <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
+                    <!-- Unique ID for this specific quantity input -->
+                    <input type="number" id="qty-mark-all" value="1" min="1" style="width: 50px; padding: 8px;">
+                    
+                    <button class="btn-quote" 
+                            data-name="DCFDA based ROS Detection Kit" 
+                            data-price="1000.00" 
+                            data-category="Cellular Assays"
+                            data-qty-id="qty-dcfda">
+                        Add to Quote
+                    </button>
+                </div>
+            </div><div class="product-card" style="cursor: pointer; position: relative;">
+                <a href="FAVA.html" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder1.jpg" alt="Mark-full name">
+                    <h3>FAVA</h3>
+                    <p class="product-price">₹1,000.00</p>
+                    <p class="product-category">Cellular Assays</p>
+                </a>
+                
+                <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
+                    <!-- Unique ID for this specific quantity input -->
+                    <input type="number" id="qty-mark-all" value="1" min="1" style="width: 50px; padding: 8px;">
+                    
+                    <button class="btn-quote" 
+                            data-name="FAVA" 
+                            data-price="1000.00" 
+                            data-category="Cellular Assays"
+                            data-qty-id="qty-fava">
+                        Add to Quote
+                    </button>
+                </div>
+            </div>
+            <div class="product-card" style="cursor: pointer; position: relative;">
+                <a href="mounting.html" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder1.jpg" alt="Mark-full name">
+                    <h3>Mounting Media</h3>
+                    <p class="product-price">₹1,000.00</p>
+                    <p class="product-category">Microscopy</p>
+                </a>
+                
+                <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
+                    <!-- Unique ID for this specific quantity input -->
+                    <input type="number" id="qty-mark-all" value="1" min="1" style="width: 50px; padding: 8px;">
+                    
+                    <button class="btn-quote" 
+                            data-name="Mounting Media" 
+                            data-price="1000.00" 
+                            data-category="Microscopy"
+                            data-qty-id="qty-mpunting">
+                        Add to Quote
+                    </button>
+                </div>
+            </div><div class="product-card" style="cursor: pointer; position: relative;">
+                <a href="supernova.html" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder1.jpg" alt="Mark-full name">
+                    <h3>Supernova</h3>
+                    <p class="product-price">₹1,000.00</p>
+                    <p class="product-category">Microscopy</p>
+                </a>
+                
+                <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
+                    <!-- Unique ID for this specific quantity input -->
+                    <input type="number" id="qty-mark-all" value="1" min="1" style="width: 50px; padding: 8px;">
+                    
+                    <button class="btn-quote" 
+                            data-name="Supernova" 
+                            data-price="1000.00" 
+                            data-category="Microscopy"
+                            data-qty-id="supernova">
+                        Add to Quote
+                    </button>
+                </div>
+            </div>
+
+            <!-- To add more products, just copy one of the blocks above and change the details and IDs -->
+            
+        </div>
+    </main>
+
+    <footer style="background-color: #1a1a1a; color: #fff; text-align: center; padding: 30px 20px; margin-top: 50px;">
+        <p style="margin: 5px 0; font-size: 1rem;">Olirum Scientific Products and Services</p>
+        <p style="margin: 5px 0; font-size: 0.8rem; color: #aaa;">AIC SEED, IISER Pune, Dr. Homi Bhabha Road, Pashan, Pune.</p>
+        <p style="margin: 15px 0 0 0; font-size: 0.8rem; color: #666;">&copy; 2026 Olirum Scientific. All rights reserved.</p>
+    </footer>
+
+    <script src="quote.js"></script>
+</body>
+</html>
