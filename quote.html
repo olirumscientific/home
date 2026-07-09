@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote Request - Olirum Scientific</title>
+    <link rel="icon" type="image/png" href="Assets/Logo.png">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -48,45 +49,67 @@
 <body style="display: flex; flex-direction: column; min-height: 100vh;">
 
     <!-- Navigation Bar -->
-    <header style="margin-top: 0 !important; top: 0; width: 100%;">
-        <div class="logo-container">
+   <header style="margin-top: 0 !important; top: 0; width: 100%; box-sizing: border-box; position: relative;">
+    
+    <!-- Top Row: Logo & Mobile Menu Icon -->
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 10px 20px; box-sizing: border-box;">
+        
+        <div class="logo-container" style="display: flex; align-items: center; gap: 10px;">
             <img src="Assets/Logo.png" alt="Olirum Scientific Logo" style="height: 40px; width: auto;">
-            Olirum Scientific
+            <span style="font-weight: bold; color: #fff; font-size: 1.2rem;">Olirum Scientific</span>
         </div>
-        <nav>
-            <ul id="nav-links">
-                <li><a href="index.html">HOME</a></li>
-                <li>
-                    <a href="category.html?cat=mycoplasma" id="nav-mycoplasma">MYCOPLASMA <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="product.html?id=mark">MaRK</a></li>
-                        <li><a href="product.html?id=mad">MaD</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="category.html?cat=cellular-assays" id="nav-cellular-assays">Cellular Assays <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="product.html?id=calcein">Calcein AM</a></li>
-                        <li><a href="product.html?id=dcfda">DCFDA bases ROS Detection Kit</a></li>
-                        <li><a href="product.html?id=fava">FAVA-Fluoroscence</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="category.html?cat=microscopy" id="nav-microscopy">Microscopy <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="product.html?id=mounting">Mounting Media</a></li>
-                        <li><a href="product.html?id=supernova">Supernova</a></li>
-                    </ul>
-                </li>
-                <li><a href="quote.html" class="active">QUOTE PAGE</a></li>
-                <li><a href="all-products.html">ALL PRODUCTS</a></li>
-                <li class="search-box" style="display: flex; align-items: center; background: #222; border-radius: 4px; padding: 2px 10px;">
-                    <input type="text" id="global-search-input" placeholder="Search products..." style="border: none; background: transparent; color: #fff; outline: none; width: 150px; font-family: inherit; font-size: 0.8rem;">
-                    <i class="fas fa-search search-icon" id="global-search-btn" style="cursor: pointer; color: #aaa;"></i>
-                </li>
-            </ul>
-        </nav>
-    </header>
+        
+        <!-- The Hamburger Icon (Hidden on Desktop) -->
+        <div id="mobile-menu" style="font-size: 1.8rem; cursor: pointer; color: #fff; display: none;">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+    </div>
+
+    <!-- Navigation Links -->
+    <nav>
+        <ul id="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            
+            <!-- Category 1: Mycoplasma -->
+            <li>
+                <a href="category.html?cat=mycoplasma" id="nav-mycoplasma">MYCOPLASMA <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="product.html?id=mark">MaRK</a></li>
+                    <li><a href="product.html?id=mad">MaD</a></li>
+                </ul>
+            </li>
+            
+            <!-- Category 2: Cellular Assays -->
+            <li>
+                <a href="category.html?cat=cellular-assays" id="nav-cellular-assays">Cellular Assays <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="product.html?id=calcein">Calcein AM</a></li>
+                    <li><a href="product.html?id=dcfda">DCFDA bases ROS Detection Kit</a></li>
+                    <li><a href="product.html?id=fava">FAVA-Fluoroscence</a></li>
+                </ul>
+            </li>
+            
+            <!-- Category 3: Microscopy -->
+            <li>
+                <a href="category.html?cat=microscopy" id="nav-microscopy">Microscopy <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="product.html?id=mounting">Mounting Media</a></li>
+                    <li><a href="product.html?id=supernova">Supernova</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="quote.html">QUOTE PAGE</a></li>
+            <li><a href="all-products.html">ALL PRODUCTS</a></li>
+            
+            <!-- Search Box -->
+            <li class="search-box" style="display: flex; align-items: center; background: #222; border-radius: 4px; padding: 2px 10px; margin-left: 10px;">
+                <input type="text" id="global-search-input" placeholder="Search products..." style="border: none; background: transparent; color: #fff; outline: none; width: 150px; font-family: inherit; font-size: 0.8rem;">
+                <i class="fas fa-search search-icon" id="global-search-btn" style="cursor: pointer; color: #aaa;"></i>
+            </li>
+        </ul>
+    </nav>
+</header>
 
     <!-- Side-by-Side Flexbox Container -->
     <main id="quote-container" style="flex: 1; display: flex; flex-wrap: wrap; gap: 40px; padding: 40px 20px; max-width: 1200px; margin: 0 auto; width: 100%; box-sizing: border-box;">
