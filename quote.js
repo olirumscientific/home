@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.btn-quote');
     buttons.forEach(button => {
         // We only add listeners to buttons that aren't dynamic placeholders
-        if (button.id !== 'dynamic-btn-quote') {
+        if (button.id !== 'dynamic-btn-quote' && button.id !== 'submit-quote-btn') {
             button.addEventListener('click', addToQuote);
         }
     });
