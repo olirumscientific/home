@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <!-- Shared Navigation Bar -->
+    <!-- Shared Navigation Bar (Fixed for Desktop & Dropdowns) -->
     <header style="margin-top: 0 !important; top: 0; width: 100%; box-sizing: border-box; position: relative;">
     
     <!-- Top Row: Logo & Mobile Menu Icon -->
@@ -87,157 +87,111 @@
 
         <div class="product-grid">
             
-            <!-- Product 1: Mark-full name -->
+            <!-- Product 1: MaRK -->
             <div class="product-card" style="cursor: pointer; position: relative;">
-                <a href="mark.html" style="display: block; color: inherit; text-decoration: none;">
-                    <img src="placeholder1.jpg" alt="Mark-full name">
+                <a href="product.html?id=mark" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder1.jpg" alt="MaRK">
                     <h3>MaRK</h3>
                     <p class="product-price">₹1,000.00</p>
                     <p class="product-category">MYCOPLASMA</p>
                 </a>
                 
                 <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
-                    <!-- Unique ID for this specific quantity input -->
-                    <input type="number" id="qty-mark-all" value="1" min="1" style="width: 50px; padding: 8px;">
-                    
-                    <button class="btn-quote" 
-                            data-name="MaRK" 
-                            data-price="1000.00" 
-                            data-category="MYCOPLASMA"
-                            data-qty-id="qty-mark">
-                        Add to Quote
-                    </button>
+                    <input type="number" id="qty-mark" value="1" min="1" style="width: 50px; padding: 8px;">
+                    <button class="btn-quote" data-name="MaRK" data-price="1000.00" data-category="MYCOPLASMA" data-qty-id="qty-mark">Add to Quote</button>
                 </div>
             </div>
 
-            <!-- Product 2: Product 12 -->
+            <!-- Product 2: MaD -->
             <div class="product-card" style="cursor: pointer; position: relative;">
-                <a href="mad.html" style="display: block; color: inherit; text-decoration: none;">
-                    <img src="placeholder2.jpg" alt="Product 12">
-                    <h3>Product 12</h3>
+                <a href="product.html?id=mad" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder2.jpg" alt="MaD">
+                    <h3>MaD</h3>
                     <p class="product-price">₹1,250.50</p>
                     <p class="product-category">MYCOPLASMA</p>
                 </a>
                 
                 <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
-                    <!-- Unique ID for this specific quantity input -->
-                    <input type="number" id="qty-prod12-all" value="1" min="1" style="width: 50px; padding: 8px;">
-                    
-                    <button class="btn-quote" 
-                            data-name="" 
-                            data-price="1250.50" 
-                            data-category="MYCOPLASMA"
-                            data-qty-id="qty-prod12-all">
-                        Add to Quote
-                    </button>
+                    <input type="number" id="qty-mad" value="1" min="1" style="width: 50px; padding: 8px;">
+                    <button class="btn-quote" data-name="MaD" data-price="1250.50" data-category="MYCOPLASMA" data-qty-id="qty-mad">Add to Quote</button>
                 </div>
             </div>
+            
+            <!-- Product 3: Calcein AM -->
             <div class="product-card" style="cursor: pointer; position: relative;">
-                <a href="Calcein.html" style="display: block; color: inherit; text-decoration: none;">
-                    <img src="placeholder1.jpg" alt="Mark-full name">
+                <a href="product.html?id=calcein" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder1.jpg" alt="Calcein AM">
                     <h3>Calcein AM</h3>
                     <p class="product-price">₹1,000.00</p>
                     <p class="product-category">Cellular Assays</p>
                 </a>
                 
                 <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
-                    <!-- Unique ID for this specific quantity input -->
-                    <input type="number" id="qty-mark-all" value="1" min="1" style="width: 50px; padding: 8px;">
-                    
-                    <button class="btn-quote" 
-                            data-name="Calcein AM" 
-                            data-price="1000.00" 
-                            data-category="Cellular Assays"
-                            data-qty-id="qty-calcein">
-                        Add to Quote
-                    </button>
+                    <input type="number" id="qty-calcein" value="1" min="1" style="width: 50px; padding: 8px;">
+                    <button class="btn-quote" data-name="Calcein AM" data-price="1000.00" data-category="Cellular Assays" data-qty-id="qty-calcein">Add to Quote</button>
                 </div>
             </div>
+            
+            <!-- Product 4: DCFDA -->
             <div class="product-card" style="cursor: pointer; position: relative;">
-                <a href="dcfda.html" style="display: block; color: inherit; text-decoration: none;">
-                    <img src="placeholder1.jpg" alt="Mark-full name">
+                <a href="product.html?id=dcfda" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder1.jpg" alt="DCFDA Kit">
                     <h3>DCFDA based ROS Detection Kit</h3>
                     <p class="product-price">₹1,000.00</p>
                     <p class="product-category">Cellular Assays</p>
                 </a>
                 
                 <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
-                    <!-- Unique ID for this specific quantity input -->
-                    <input type="number" id="qty-mark-all" value="1" min="1" style="width: 50px; padding: 8px;">
-                    
-                    <button class="btn-quote" 
-                            data-name="DCFDA based ROS Detection Kit" 
-                            data-price="1000.00" 
-                            data-category="Cellular Assays"
-                            data-qty-id="qty-dcfda">
-                        Add to Quote
-                    </button>
+                    <input type="number" id="qty-dcfda" value="1" min="1" style="width: 50px; padding: 8px;">
+                    <button class="btn-quote" data-name="DCFDA based ROS Detection Kit" data-price="1000.00" data-category="Cellular Assays" data-qty-id="qty-dcfda">Add to Quote</button>
                 </div>
-            </div><div class="product-card" style="cursor: pointer; position: relative;">
-                <a href="FAVA.html" style="display: block; color: inherit; text-decoration: none;">
-                    <img src="placeholder1.jpg" alt="Mark-full name">
+            </div>
+            
+            <!-- Product 5: FAVA -->
+            <div class="product-card" style="cursor: pointer; position: relative;">
+                <a href="product.html?id=fava" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder1.jpg" alt="FAVA">
                     <h3>FAVA</h3>
                     <p class="product-price">₹1,000.00</p>
                     <p class="product-category">Cellular Assays</p>
                 </a>
                 
                 <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
-                    <!-- Unique ID for this specific quantity input -->
-                    <input type="number" id="qty-mark-all" value="1" min="1" style="width: 50px; padding: 8px;">
-                    
-                    <button class="btn-quote" 
-                            data-name="FAVA" 
-                            data-price="1000.00" 
-                            data-category="Cellular Assays"
-                            data-qty-id="qty-fava">
-                        Add to Quote
-                    </button>
+                    <input type="number" id="qty-fava" value="1" min="1" style="width: 50px; padding: 8px;">
+                    <button class="btn-quote" data-name="FAVA" data-price="1000.00" data-category="Cellular Assays" data-qty-id="qty-fava">Add to Quote</button>
                 </div>
             </div>
+            
+            <!-- Product 6: Mounting Media -->
             <div class="product-card" style="cursor: pointer; position: relative;">
-                <a href="mounting.html" style="display: block; color: inherit; text-decoration: none;">
-                    <img src="placeholder1.jpg" alt="Mark-full name">
+                <a href="product.html?id=mounting" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder1.jpg" alt="Mounting Media">
                     <h3>Mounting Media</h3>
                     <p class="product-price">₹1,000.00</p>
                     <p class="product-category">Microscopy</p>
                 </a>
                 
                 <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
-                    <!-- Unique ID for this specific quantity input -->
-                    <input type="number" id="qty-mark-all" value="1" min="1" style="width: 50px; padding: 8px;">
-                    
-                    <button class="btn-quote" 
-                            data-name="Mounting Media" 
-                            data-price="1000.00" 
-                            data-category="Microscopy"
-                            data-qty-id="qty-mpunting">
-                        Add to Quote
-                    </button>
+                    <input type="number" id="qty-mounting" value="1" min="1" style="width: 50px; padding: 8px;">
+                    <button class="btn-quote" data-name="Mounting Media" data-price="1000.00" data-category="Microscopy" data-qty-id="qty-mounting">Add to Quote</button>
                 </div>
-            </div><div class="product-card" style="cursor: pointer; position: relative;">
-                <a href="supernova.html" style="display: block; color: inherit; text-decoration: none;">
-                    <img src="placeholder1.jpg" alt="Mark-full name">
+            </div>
+            
+            <!-- Product 7: Supernova -->
+            <div class="product-card" style="cursor: pointer; position: relative;">
+                <a href="product.html?id=supernova" style="display: block; color: inherit; text-decoration: none;">
+                    <img src="placeholder1.jpg" alt="Supernova">
                     <h3>Supernova</h3>
                     <p class="product-price">₹1,000.00</p>
                     <p class="product-category">Microscopy</p>
                 </a>
                 
                 <div class="purchase-controls" style="display: flex; gap: 10px; align-items: center; margin-top: 15px; position: relative; z-index: 2;">
-                    <!-- Unique ID for this specific quantity input -->
-                    <input type="number" id="qty-mark-all" value="1" min="1" style="width: 50px; padding: 8px;">
-                    
-                    <button class="btn-quote" 
-                            data-name="Supernova" 
-                            data-price="1000.00" 
-                            data-category="Microscopy"
-                            data-qty-id="supernova">
-                        Add to Quote
-                    </button>
+                    <input type="number" id="qty-supernova" value="1" min="1" style="width: 50px; padding: 8px;">
+                    <button class="btn-quote" data-name="Supernova" data-price="1000.00" data-category="Microscopy" data-qty-id="qty-supernova">Add to Quote</button>
                 </div>
             </div>
 
-            <!-- To add more products, just copy one of the blocks above and change the details and IDs -->
-            
         </div>
     </main>
 
